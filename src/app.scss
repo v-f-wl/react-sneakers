@@ -1,4 +1,5 @@
 .wrapper{
+    position: relative;
     max-width: 1080px;
     margin: 0 auto;
     margin-top: 85px;
@@ -6,71 +7,7 @@
     border-radius: 20px;
 }
 //________  HEADER  _______
-.header{
-    padding: 0 45px;
-    height: 128px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    border-bottom: 1px solid #EAEAEA;
-    &Left{
-        display: grid;
-        grid-template-columns: 40px 1fr;
-        gap: 0 1rem;
-        &Pic{
-            width: 40px;
-            height: 40px;
-            grid-column: 1/2;
-            grid-row: 1/3;
-            border-radius: 50%;
-        }
-        &Tilte{
-            grid-column: 2/3;
-            grid-row: 1/2;
-            font-weight: 700;
-
-            font-size: 20px;
-            line-height: 24px;
-            text-transform: uppercase;
-
-            color: #000000;
-        }
-        &Subt{
-            grid-column: 2/3;
-            grid-row: 2/3;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #9D9D9D;
-        }
-    }
-}
-.iconList{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    &Item{
-        transition: .3s;
-        &Bag{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        &Price{
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17px;
-            color: #5C5C5C;
-            transition: .3s;
-        }
-    }
-}
-
-.itemIcon{
-    font-size: 20px;
-    color: #9B9B9B;
-}
 //________  CONTENT  _______
 
 //________  CONTENT TOP _______
@@ -127,76 +64,6 @@
     margin-top: 40px;
 }
 
-.cartMain{
-    position: relative;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    border: 1px solid #F3F3F3;
-    border-radius: 40px;
-    &Like{
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        width: 32px;
-        height: 32px;
-        background-color: #FEF0F0;
-        border-radius: 7px;
-    }
-    &Pic{
-        margin: 0 auto;
-        width: 133px;
-    }
-    &Title{
-        display: block;
-        margin-top: 14px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        line-clamp: 3;
-        box-orient: vertical;
-    }
-    &Bottom{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 14px;
-        &Add{
-            width: 32px;
-            height: 32px;
-            border: 1px solid #F2F2F2;
-            border-radius: 8px;
-            font-size: 11px;
-            color: #D3D3D3;
-            cursor: pointer;
-        }
-    }
-}
 
-.cardBottom{
-    &Title{
-        display: block;
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 13px;
-        text-transform: uppercase;
-        color: #BDBDBD;
-    }
-    &Price{
-        display: block;
-        margin-top: 2px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-    }
-}
+//________  DRAWER _______

@@ -1,0 +1,113 @@
+.drawer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.583);
+
+    &__close{
+        width: 100%;
+    }
+    &__content{
+        position: relative;
+        width: 385px;
+        padding: 30px;
+        background-color: #fff;
+    }
+}
+
+.cartList{
+    margin-top: 30px;
+}
+
+.cartItem{
+    width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 30px 10px;
+    border: 1px solid #F3F3F3;
+    border-radius: 20px;
+    & img{
+        width: 70px;
+        height: 70px;
+    }
+    &Content{
+        margin-left: 21px;
+        margin-right: 12px;
+    }
+    &Title{
+        display: block;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &Price{
+        display: block;
+        margin-top: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &Btn{
+        min-width: 32px;
+        min-height: 32px;
+
+        border: 1px solid #DBDBDB;
+        border-radius: 8px;
+
+        color: #B5B5B5;
+        font-size: 11px;
+        cursor: pointer;
+    }
+}
+
+.total{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    & ul{
+        & li{
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            margin-bottom: 19px;
+            & div{
+                width: 50%;
+                height: 1px;
+                border-bottom: 1px dashed #D3D3D3; 
+            }
+        }
+    }
+    &Btn{
+        position: relative;
+        margin-top: 5px;
+        width: 100%;
+        height: 55px;
+        background-color: #9DD458; 
+        border-radius: 18px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #FFFFFF;
+        transition: 0.3s;
+        &:hover{
+            opacity: 0.7;
+            & .totalArrow{
+                right: 35px;
+            }
+        }
+    }
+    &Arrow{
+        position: absolute;
+        top: 53%;
+        transform: translateY(-50%);
+        right: 40px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+}
