@@ -16,9 +16,9 @@
         left: 30px;
         width: 32px;
         height: 32px;
-        background-color: #FEF0F0;
+        background-color: #cccccc;
         border-radius: 7px;
-        color: red;
+        color: rgb(255, 255, 255);
     }
     &Pic{
         margin: 0 auto;
@@ -78,3 +78,13 @@
     }
 }
 
+
+.btnAdd{
+    color: #fff;
+    background-color: rgb(70, 193, 70);
+}
+
+.btnLike{
+    background-color: #FEF0F0;
+    color: red;
+}

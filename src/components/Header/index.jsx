@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Header.scss"
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className="header">
         <div className="headerLeft">
@@ -11,7 +11,7 @@ const Header = () => {
         </div>
         <div className="headerRight">
           <ul className="iconList">
-            <li className="iconListItem iconListItemBag">
+            <li className="iconListItem iconListItemBag" onClick={props.onClickBag}>
               <span className="itemIcon icon-bag"></span>
               <span className="iconListItemPrice">1205 руб.</span>
             </li>

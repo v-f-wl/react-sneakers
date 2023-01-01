@@ -1,15 +1,40 @@
 import React from 'react'
 import './app.scss'
-import Card from './components/Card/Card';
-import Drawer from './components/Drawer/Drawer';
-import Header from './components/Header/Header';
+import Card from './components/Card';
+import Drawer from './components/Drawer';
+import Header from './components/Header';
 
+const arr = []
 function App() {
+
+  const [cardOpened, setCardOpened] = React.useState(false)
+  const [bagItems, setBagItems] = React.useState([])
+  const [items, setItems] = React.useState([])
+
+
+  React.useEffect( () => {
+    fetch('https://63add95e3e4651691665a26f.mockapi.io/items ')
+      .then( (res) => {
+        return res.json()
+      })
+        .then ((json) => {
+          setItems(json)
+        })
+  }, [])
+
+  const onAddToCard = (obj) => setBagItems(prev => [...prev, obj])  
+
   return (
     <div className="wrapper"> 
-        <Drawer />
-        <Header />
-
+      {cardOpened &&
+        <Drawer 
+          items ={bagItems}
+          closeBag = {() => {setCardOpened(false)}}
+        /> 
+      }
+      <Header
+        onClickBag ={() => {setCardOpened(true)}}
+      />
         <div className="content">
           <div className="contentTop">
             <h2 className="contentTopTitle">
@@ -25,10 +50,17 @@ function App() {
           </div>
 
           <div className="contantMain">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {
+              items.map(obj => 
+                <Card 
+                  title={obj.name}
+                  price={obj.price}
+                  img={obj.img}
+                  onClickFavorite ={() => console.log('Fav')}
+                  onClickPlus = {(obj) => onAddToCard(obj)}
+                />
+              )
+            }
           </div>
         </div>
     </div>
